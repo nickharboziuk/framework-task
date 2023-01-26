@@ -24,7 +24,7 @@ export class App {
 
   private setupStandardMiddlewares(): void {
     // eslint-disable-next-line unicorn/prefer-module
-    this.app.use(express.static(__dirname));
+    this.app.use(express.static(__dirname.replace('/src', '')));
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(
