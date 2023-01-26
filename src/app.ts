@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import express, { Express } from 'express';
 
 import { errorHandlerMiddleware } from './middlewares';
@@ -26,6 +27,12 @@ export class App {
     this.app.use(express.static(__dirname));
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
+    this.app.use(
+      cors({
+        origin: this.configuration.get('FRONT_END_API_ENDPOINT'),
+        methods: ['GET', 'POST'],
+      })
+    );
   }
 
   private setupErrorMiddleware(): void {

@@ -3,7 +3,7 @@ import { IsNotEmpty, IsString } from 'class-validator';
 export class SubmitWordRequestDto {
   @IsNotEmpty()
   @IsString()
-  userName: string;
+  name: string;
 
   @IsNotEmpty()
   @IsString()

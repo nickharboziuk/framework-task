@@ -15,10 +15,10 @@ export class UserScoresManager {
     return this.scoresService.getArrayFromMap();
   }
 
-  public submitWord({ word, userName }: SubmitWordRequestDto): number {
+  public submitWord({ word, name }: SubmitWordRequestDto): number {
     const palindromeLength = this.wordsService.getPalindromeLength(word);
 
-    this.scoresService.addNewUserScore(userName, palindromeLength);
+    this.scoresService.addNewUserScore(name, palindromeLength);
     this.scoresService.sortUsersTopResult();
 
     return palindromeLength;

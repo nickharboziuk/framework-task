@@ -10,6 +10,10 @@ export class ConfigurationDto {
   NODE_ENV: string;
 
   @IsNotEmpty()
+  @IsString()
+  FRONT_END_API_ENDPOINT: string;
+
+  @IsNotEmpty()
   @IsNumberString()
   USERS_TOP_QUANTITY: string;
 }

@@ -1,4 +1,4 @@
 export interface IUserScore {
   name: string;
-  score: number;
+  points: number;
 }

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "projects": {
+    "framework-task": {
+      "architect": {
+        "serve": {
+          "options": {
+            "port": 3002
+          },
+          "builder": ""
+        }
+      },
+      "projectType": "application",
+      "root": ""
+    }
+  }
+}

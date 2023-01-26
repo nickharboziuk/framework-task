@@ -7,7 +7,7 @@ import { SubmitWordRequestDto } from './dtos';
 const userScoresManager = new UserScoresManager(new WordsService());
 export const submitWord = async (request: Request, response: Response): Promise<void> => {
   const body: SubmitWordRequestDto = request.body;
-  const wordScore = userScoresManager.submitWord(body);
+  const scores = userScoresManager.submitWord(body);
 
-  response.json({ wordScore });
+  response.json({ scores });
 };

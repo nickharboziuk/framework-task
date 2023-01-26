@@ -5,7 +5,7 @@ import { WordsService } from '../services';
 
 const userScoresManager = new UserScoresManager(new WordsService());
 export const getAll = async (_request: Request, response: Response): Promise<void> => {
-  const mess = userScoresManager.getUsersScores();
+  const body = userScoresManager.getUsersScores();
 
-  response.json(mess);
+  response.json(body);
 };

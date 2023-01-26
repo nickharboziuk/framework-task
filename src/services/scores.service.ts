@@ -18,7 +18,7 @@ export class ScoresService {
   }
 
   public getArrayFromMap(): IUserScore[] {
-    return [...this.usersResult].map(([name, score]) => ({ name, score }));
+    return [...this.usersResult].map(([name, points]) => ({ name, points }));
   }
 
   public sortUsersTopResult(): void {
